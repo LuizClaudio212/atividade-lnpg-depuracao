@@ -16,8 +16,11 @@ def get_numbers():
 
 def main():
     numbers = get_numbers()
-    print("Average:", calculate_average(numbers))
-    print("Maximum:", find_max(numbers))
+    if numbers: #Condicional para verificar se a lista não está vazia e tratar o erro.
+        print("Average:", calculate_average(numbers))
+        print("Maximum:", find_max(numbers))
+    else:
+        print("Error! enter the numbers")
 
 if __name__ == "__main__":
     main()
